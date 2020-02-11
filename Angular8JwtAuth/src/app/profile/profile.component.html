@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="mt-5 card card-body">
+      <table class="table table-striped small">
+        <thead>
+  
+          <tr style="text-align: center;">
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Experience</th>
+            <th scope="col">Domain</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of  users" style="text-align: center;">
+            <td scope="col">{{user.id}}</td>
+            <td scope="col">{{user.name}}</td>
+            <td scope="col">{{user.email}}</td>
+            <td scope="col">{{user.experience}}</td>
+            <td scope="col">{{user.domain}}</td>
+            <td scope="col"><button class="btn btn-danger btn-xs" (click)="deleteUser(user.id)">Delete</button> </td>
+            <td scope="col"><button class="btn btn-danger btn-xs" (click)="edit(user.id)">Edit</button> </td>
+            </tr>
+          <tr>
+        </tbody>
+      </table>
+  
+    </div>
+  </div>
